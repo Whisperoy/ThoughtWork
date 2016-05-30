@@ -39,13 +39,15 @@ public class PrintList {
 					unit = g.getUnit();
 					break;
 				}			
-			}			
+			}
+			//打印购买商品的名称,数量,和单价
 			float tatal = num * price;
 			tatal = (float)Math.round(tatal * 100)/100;
 			float preTatal = p.preferential(num, price, type);
 			System.out.print("名称:" + name + ",");
 			System.out.print("数量:" + num + unit + ",");
-			System.out.print("单价:" + price + "(元)" + ",");						
+			System.out.print("单价:" + price + "(元)" + ",");
+			//根据是否有优惠商品打印不同的结算信息
 			if(type.equals("九点五折出售")) {
 				hasPre = true;
 				hm.put(name, num + unit);
@@ -59,6 +61,7 @@ public class PrintList {
 			}			
 		}
 		Iterator<String> it = hm.keySet().iterator();
+		//输出批发商品信息
 		if(hasPre) {
 			System.out.println("批发价出售商品:");
 			while(it.hasNext()) {
