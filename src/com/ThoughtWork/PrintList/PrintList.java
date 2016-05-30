@@ -48,7 +48,7 @@ public class PrintList {
 			System.out.print("数量:" + num + unit + ",");
 			System.out.print("单价:" + price + "(元)" + ",");
 			//根据是否有优惠商品打印不同的结算信息
-			if(type.equals("九点五折出售")) {
+			if(num >= 10 && type.equals("批发价出售")) {
 				hasPre = true;
 				hm.put(name, num + unit);
 				count += preTatal;
