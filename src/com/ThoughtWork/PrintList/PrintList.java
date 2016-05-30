@@ -69,7 +69,7 @@ public class PrintList {
 				System.out.print("名称:" + str + ",");
 				System.out.println("数量" + hm.get(str));
 			}
-			System.out.println("总计:" + count + "(元)" + "节省" + (float)Math.round(pre * 100)/100 + "(元)");
+			System.out.println("总计:" + (float)Math.round(count * 100)/100 + "(元)" + "节省" + (float)Math.round(pre * 100)/100 + "(元)");
 		}else {
 			System.out.println("总计" + count + "(元)");
 		}
